@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "DevTinder",
+      "link": "DevTinder",
+      "img": "DevTinder.png"
+    },
+    {
+      "id": 2,
+      "name": "MovieGPT",
+      "link": "MovieRecommender",
+      "img": "MovieRecommender.png"
+    },
+    {
+      "id": 3,
+      "name": "ChessGAME",
+      "link":"?tab=repositories",
+      "img": "ChessGame.png"
+    }
+  ]
+}

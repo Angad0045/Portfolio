@@ -43,7 +43,7 @@ export const ProjectSection = () => {
                       className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                     >
                       <div className="flex items-center gap-1">
-                        <img className="w-4" src="GitHub.png" alt="GitHub" />
+                        <img className="w-4" src="Github.png" alt="GitHub" />
                         <p>GitHub</p>
                       </div>
                     </CardItem>

@@ -55,7 +55,7 @@ export const ConnectSection = () => {
       href: "https://www.linkedin.com/in/angad-patil/",
     },
     {
-      icon: "GitHub.png",
+      icon: "Github.png",
       label: "Github",
       value: "Angad@0045",
       href: "https://github.com/Angad0045",

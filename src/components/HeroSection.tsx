@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { motion, spring } from "motion/react";
 import { EncryptedText } from "./ui/encrypted-text";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { BackgroundRippleEffect } from "./ui/background-ripple-effect";
@@ -41,22 +41,25 @@ export const HeroSection = ({ onButtonClick }: ChildProps) => {
           revealDelayMs={175}
         />
       </h1>
-      <p className="z-10 mt-2 md:mt-5 w-[80%] md:w-1/2 text-xs md:text-lg text-justify [text-align-last:center] md:text-center text-white/50">
+      <motion.p className="z-10 mt-2 md:mt-5 w-[80%] md:w-1/2 text-xs md:text-lg text-justify [text-align-last:center] md:text-center text-white/50">
         Enthusiastic Web Developer with a passion for creating scalable,
         high-performance, and user-centric applications using React and Node.js
-      </p>
+      </motion.p>
       <motion.div className="z-10 relative mx-4 my-4 flex items-center justify-center gap-4 text-center">
         <LayoutTextFlip
           text="Creative"
           words={["Coding", "Thinking", "Components!"]}
         />
       </motion.div>
-      <button
+      <motion.button
+        whileHover={{ scale: 1.07, y: -5 }}
+        whileTap={{ scale: 0.7, y: 5 }}
+        transition={{ type: spring, stiffness: 300, damping: 15 }}
         onClick={onButtonClick}
-        className="z-10 mt-10 md:mt-20 bg-transparent text-sm sm:text-lg font-black px-4 md:px-6 py-2 md:py-3 rounded-3xl border-2 border-[#155dfc] hover:bg-neutral-900 cursor-pointer hover:shadow-[0_0_10px_#155dfc,0_0_20px_#155dfc,0_0_30px_#155dfc] transition-shadow duration-300"
+        className="z-10 mt-10 md:mt-20 bg-transparent text-sm sm:text-lg font-black px-4 md:px-6 py-2 md:py-3 rounded-3xl border-2 border-[#155dfc] hover:bg-neutral-900 cursor-pointer"
       >
         Let's Connect
-      </button>
+      </motion.button>
     </div>
   );
 };

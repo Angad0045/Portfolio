@@ -1,22 +1,24 @@
 import Link from "next/link";
 import data from "../data/Projects.json";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import { motion } from "framer-motion";
 
 interface Project {
+  id: number;
   name: string;
   link: string;
   img: string;
 }
 
 export const ProjectSection = () => {
-  const project = data?.projects;
+  const project: Project[] = data?.projects;
   return (
     <div className="dark:bg-neutral-900/20 w-full flex flex-col justify-center items-center py-20">
-      <h1 className="text-4xl md:text-[6rem] text-center font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+      <motion.h1 className="text-4xl md:text-[6rem] text-center font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
         Projects
-      </h1>
+      </motion.h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-center md:gap-10 px-5 lg:px-20">
-        {project.map((p) => (
+        {project.map((p, index) => (
           <div key={p.id}>
             <CardContainer className="inter-var">
               <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full md:w-[35rem] h-auto rounded-xl p-6 border">
@@ -55,7 +57,7 @@ export const ProjectSection = () => {
         ))}
       </div>
       <Link href={"https://github.com/Angad0045?tab=repositories"}>
-        <span className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold cursor-pointer hover:shadow-[0_0_10px_#ffffff,0_0_15px_#ffffff,0_0_20px_#ffffff]">
+        <span className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold cursor-pointer hover:bg-transparent hover:border hover:border-white hover:text-white transform-border duration-200">
           Click to view more projects
         </span>
       </Link>

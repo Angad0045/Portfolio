@@ -130,10 +130,7 @@ export const ConnectSection = () => {
           <h1 className="text-xl sm:text-2xl font-bold">Contact Information</h1>
           {contactInfo.map((info) => (
             <div key={info.label} className="flex items-center gap-2">
-              <div
-                className="p-2 border-2 border-white/20 rounded-xl hover:shadow-[0_0_5px_#155dfc,0_0_15px_#155dfc,0_0_25px_#155dfc]
-              transition-shadow duration-300"
-              >
+              <div className="p-2 border-2 border-white/20 rounded-xl">
                 <div
                   className="w-8 h-8 bg-[#155dfc]"
                   style={{
@@ -152,10 +149,14 @@ export const ConnectSection = () => {
                 <p className="text-sm text-white/50">{info.label}</p>
                 {info.href ? (
                   <Link href={`${info.href}`}>
-                    <p className="text-md text-white font-bold">{info.value}</p>
+                    <p className="text-md text-white font-bold hover:text-[#155dfc]">
+                      {info.value}
+                    </p>
                   </Link>
                 ) : (
-                  <p className="text-md text-white font-bold">{info.value}</p>
+                  <p className="text-md text-white font-bold hover:text-[#155dfc]">
+                    {info.value}
+                  </p>
                 )}
               </div>
             </div>
@@ -173,9 +174,8 @@ export const ConnectSection = () => {
                 href={`${social.href}`}
               >
                 <div
-                  className="bg-gradient-to-l from-black to-neutral-900 flex justify-start items-center gap-3 sm:gap-4 my-3 p-3 border-2 border-neutral-800 rounded-2xl cursor-pointer
-              hover:shadow-[0_0_5px_#155dfc,0_0_15px_#155dfc,0_0_25px_#155dfc]
-              transition-shadow duration-300"
+                  className="bg-gradient-to-l from-black to-neutral-900 flex justify-start items-center gap-3 sm:gap-4 my-3 p-3 border-2 border-neutral-800 rounded-2xl cursor-pointer hover:shadow-[0_0_5px_#155dfc,0_0_15px_#155dfc,0_0_25px_#155dfc]
+                  transition-shadow duration-300"
                 >
                   <div
                     className="w-10 h-10 bg-[#155dfc]"

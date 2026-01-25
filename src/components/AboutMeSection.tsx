@@ -16,11 +16,8 @@ export const AboutMeSection = () => {
       >
         <div className="bg-[#155dfc]/80 w-full h-full flex flex-col justify-center items-center">
           <div className="w-full h-auto">
-            <h1 className="font-black text-xl md:text-4xl text-center text-white my-3">
-              About Me
-            </h1>
             <div className="text-white text-sm md:text-xl text-center w-full flex flex-col justify-center items-start px-5 lg:px-20 pb-5 lg:pb-10 space-y-1 md:space-y-3">
-              <h1>
+              <h1 className="mt-2">
                 👋 Hello! My Name is{" "}
                 <span className="md:text-2xl font-black">Angad Patil</span>
               </h1>

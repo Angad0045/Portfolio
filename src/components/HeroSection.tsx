@@ -33,7 +33,7 @@ export const HeroSection = ({ onButtonClick }: ChildProps) => {
       <h1 className="z-10 font-black">
         <TypewriterEffectSmooth words={words} />
       </h1>
-      <h1 className="z-10 mt-2 text-4xl md:text-7xl lg:text-8xl font-black">
+      <h1 className="z-10 mt-1 text-[44px] md:text-7xl lg:text-8xl font-black tracking-tight">
         <EncryptedText
           text="Software Developer"
           encryptedClassName="text-neutral-500"
@@ -41,7 +41,7 @@ export const HeroSection = ({ onButtonClick }: ChildProps) => {
           revealDelayMs={175}
         />
       </h1>
-      <motion.p className="z-10 mt-2 md:mt-5 w-[55%] md:w-1/2 text-xs md:text-lg text-justify [text-align-last:center] md:text-center text-white/50">
+      <motion.p className="z-10 mt-1 md:mt-5 w-[85%] md:w-1/2 text-xs md:text-lg text-justify [text-align-last:center] md:text-center text-white/50">
         Enthusiastic Web Developer with a passion for creating scalable,
         high-performance, and user-centric applications using React and Node.js
       </motion.p>

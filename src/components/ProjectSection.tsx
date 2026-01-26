@@ -19,7 +19,17 @@ export const ProjectSection = () => {
       </motion.h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-center md:gap-10 px-5 lg:px-20">
         {project.map((p, index) => (
-          <div key={p.id}>
+          <motion.div
+            key={p.id}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.2,
+              ease: "easeInOut",
+            }}
+          >
             <CardContainer className="inter-var">
               <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full md:w-[35rem] h-auto rounded-xl p-6 border">
                 <CardItem
@@ -53,7 +63,7 @@ export const ProjectSection = () => {
                 </div>
               </CardBody>
             </CardContainer>
-          </div>
+          </motion.div>
         ))}
       </div>
       <Link href={"https://github.com/Angad0045?tab=repositories"}>

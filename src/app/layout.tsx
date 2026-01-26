@@ -10,8 +10,13 @@ const redHatDisplay = Red_Hat_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Angad Patil",
-  description: "Portfolio Website",
+  title: "Portfolio - Angad Patil",
+  description:
+    "I’m a software developer dedicated to building efficient, scalable, and user-centric applications. With a background in React & Node.js, I specialize in turning complex technical requirements into seamless digital experiences. Whether I'm optimizing a backend database or polishing a UI, my goal is always the same: writing clean code that solves real-world problems",
+  keywords: ["Portfolio", "Software Developer", "Next.js"],
+  icons: {
+    icon: "/Icon.png",
+  },
 };
 
 export default function RootLayout({

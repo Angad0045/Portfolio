@@ -64,7 +64,7 @@ export const ConnectSection = () => {
 
   //Form
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -84,7 +84,7 @@ export const ConnectSection = () => {
           from_email: formData.email,
           message: formData.message,
           to_email: "angadpatil1141@gmail.com",
-        }
+        },
       );
 
       if (result.status === 200) {
@@ -107,10 +107,10 @@ export const ConnectSection = () => {
   const handleMailtoFallback = () => {
     const subject = encodeURIComponent("Contact from Portfolio");
     const body = encodeURIComponent(
-      `Hi Angad,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\nBest regards,\n${formData.name}`
+      `Hi Angad,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\nBest regards,\n${formData.name}`,
     );
     window.open(
-      `mailto:angadpatil1141@gmail.com?subject=${subject}&body=${body}`
+      `mailto:angadpatil1141@gmail.com?subject=${subject}&body=${body}`,
     );
   };
 
@@ -172,6 +172,8 @@ export const ConnectSection = () => {
                 key={social.label}
                 className="w-full sm:auto"
                 href={`${social.href}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <div
                   className="bg-gradient-to-l from-black to-neutral-900 flex justify-start items-center gap-3 sm:gap-4 my-3 p-3 border-2 border-neutral-800 rounded-2xl cursor-pointer hover:shadow-[0_0_5px_#155dfc,0_0_15px_#155dfc,0_0_25px_#155dfc]

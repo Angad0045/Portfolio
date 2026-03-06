@@ -48,7 +48,11 @@ export const ProjectSection = () => {
                   />
                 </CardItem>
                 <div className="flex justify-end items-center mt-10">
-                  <Link href={`https://github.com/Angad0045/${p.link}`}>
+                  <Link
+                    href={`https://github.com/Angad0045/${p.link}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <CardItem
                       translateZ={20}
                       as="button"

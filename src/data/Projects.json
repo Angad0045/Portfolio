@@ -2,15 +2,15 @@
   "projects": [
     {
       "id": 1,
-      "name": "DevTinder",
-      "link": "DevTinder",
-      "img": "DevTinder.png"
+      "name": "PromptPlay",
+      "link": "PromptPlay",
+      "img": "PromptPlay.png"
     },
     {
       "id": 2,
-      "name": "MovieGPT",
-      "link": "MovieRecommender",
-      "img": "MovieRecommender.png"
+      "name": "DevTinder",
+      "link": "DevTinder",
+      "img": "DevTinder.png"
     },
     {
       "id": 3,

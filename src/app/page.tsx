@@ -1,9 +1,9 @@
 "use client";
+import { HeroSection } from "@/components/HeroSection";
 import { AboutMeSection } from "@/components/AboutMeSection";
+import { ProjectSection } from "@/components/ProjectSection";
 import { ConnectSection } from "@/components/ConnectSection";
 import { Footer } from "@/components/Footer";
-import { HeroSection } from "@/components/HeroSection";
-import { ProjectSection } from "@/components/ProjectSection";
 import { useRef } from "react";
 
 export default function Home() {

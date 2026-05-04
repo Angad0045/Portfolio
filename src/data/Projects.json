@@ -3,19 +3,21 @@
     {
       "id": 1,
       "name": "PromptPlay",
-      "link": "PromptPlay",
+      "link":"promptplay-beta.vercel.app",
+      "githubLink": "PromptPlay",
       "img": "PromptPlay.png"
     },
     {
       "id": 2,
-      "name": "DevTinder",
-      "link": "DevTinder",
-      "img": "DevTinder.png"
+      "name": "DevMatch",
+      "link":"devmatch-frontend-gamma.vercel.app",
+      "githubLink": "DevMatch-Frontend",
+      "img": "DevMatch.png"
     },
     {
       "id": 3,
       "name": "ChessGAME",
-      "link":"?tab=repositories",
+      "githubLink":"?tab=repositories",
       "img": "ChessGame.png"
     }
   ]

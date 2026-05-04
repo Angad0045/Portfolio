@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 interface Project {
   id: number;
   name: string;
-  link: string;
+  link?: string;
+  githubLink: string;
   img: string;
 }
 
@@ -47,23 +48,49 @@ export const ProjectSection = () => {
                     alt="thumbnail"
                   />
                 </CardItem>
-                <div className="flex justify-end items-center mt-10">
-                  <Link
-                    href={`https://github.com/Angad0045/${p.link}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <CardItem
-                      translateZ={20}
-                      as="button"
-                      className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                <div className="flex justify-end items-center gap-1">
+                  {p.link && (
+                    <div className="mt-10">
+                      <Link
+                        href={`https://${p.link}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <CardItem
+                          translateZ={20}
+                          as="button"
+                          className="px-4 py-2 rounded-xl text-white text-xs font-bold"
+                        >
+                          <div className="flex items-center gap-1">
+                            <img
+                              className="w-4 invert"
+                              src="Link.png"
+                              alt="Link"
+                            />
+                          </div>
+                        </CardItem>
+                      </Link>
+                    </div>
+                  )}
+                  {/* Github Links */}
+                  <div className="flex justify-end items-center mt-10">
+                    <Link
+                      href={`https://github.com/Angad0045/${p.githubLink}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <div className="flex items-center gap-1">
-                        <img className="w-4" src="Github.png" alt="GitHub" />
-                        <p>GitHub</p>
-                      </div>
-                    </CardItem>
-                  </Link>
+                      <CardItem
+                        translateZ={20}
+                        as="button"
+                        className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                      >
+                        <div className="flex items-center gap-1">
+                          <img className="w-4" src="Github.png" alt="GitHub" />
+                          <p>GitHub</p>
+                        </div>
+                      </CardItem>
+                    </Link>
+                  </div>
                 </div>
               </CardBody>
             </CardContainer>
